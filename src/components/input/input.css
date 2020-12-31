@@ -1,0 +1,45 @@
+.Input {
+    display: block;
+    width: 100%;
+}
+
+.input__form {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 80px;
+    padding: 4px;
+}
+
+.input__mes {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    padding-left: 6px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+
+    border: 4px solid rgb(66, 57, 2);
+}
+
+.input__mes:focus {
+    border: 4px solid rgb(226, 168, 42);
+}
+
+.input__sendler {
+    margin-left: 6px;
+    display: inline-block;
+    width: 140px;
+    font-size: 24px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fff;
+
+    border: 1px solid rgb(161, 118, 26);
+    background-color: rgb(66, 57, 2);
+}
+
+.input__sendler:hover {
+    color: #333;
+    background-color: rgb(226, 168, 42);
+}

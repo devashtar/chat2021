@@ -1,0 +1,78 @@
+.Messages {
+    width: 100%;
+    height: calc(100vh - 150px);
+    padding: 4px;
+    padding-right: 30px;
+
+    overflow-y: scroll;
+
+    background-color: #293235
+}
+
+.Messages::-webkit-scrollbar {
+    width: 30px;
+}
+  
+.Messages::-webkit-scrollbar-track {
+    background: #293235        
+}
+  
+.Messages::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 168, 42);
+    border-radius: 20px;       
+    border: 8px solid #293235;  
+}
+
+.message__wrapper {
+    width: 100%;
+    margin-bottom: 6px;
+}
+
+.message__flex {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+}
+
+.message__flex.even {
+    align-items: flex-end;
+}
+
+.message__date {
+    height: 30px;
+    width: 140px;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 14px;
+    font-weight: 600px;
+    color: #555;
+
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(248, 242, 233);
+}
+
+.message__item {
+    display: inline;
+    max-width: 80%;
+    margin: 0px 15px;
+    padding: 0px 4px;
+
+    border-radius: 6px 6px 6px 6px;
+    background-color: rgb(248, 242, 233);
+}
+
+.message__sender {
+    font-size: 18px;
+    font-weight: 700;
+    color: #222;
+}
+
+.message__text {
+    font-size: 16px;
+    color: #333;
+    text-align: justify;
+    line-height: 28px;
+}

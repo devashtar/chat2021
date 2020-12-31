@@ -1,0 +1,47 @@
+.Auth {
+    margin: 0;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+
+    background-color: #203647;
+    -webkit-box-shadow: 0px 0px 8px 1px #000000; 
+    box-shadow: 0px 0px 8px 1px #000000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fefefe;
+}
+
+.nav__button__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 300px;
+    height: 100%;
+}
+
+.nav__button {
+    display: block;
+    margin: 0;
+    padding: 8px 15px;
+
+    font-size: 16px;
+    font-weight: 500;
+    color: #eee;
+
+    border: 1px solid rgb(83, 133, 240);
+    border-radius: 6px;
+
+    background-color: #182a38;
+}
+
+.nav__button:hover {
+    border: 1px solid rgb(180, 202, 250);
+    cursor: pointer;
+}

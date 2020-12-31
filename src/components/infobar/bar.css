@@ -1,0 +1,239 @@
+@keyframes flashborder {
+	from {
+		border-bottom: 1px solid rgb(179, 143, 47);
+	}
+	to {
+        border-bottom: 1px solid rgb(255, 52, 52);
+    }
+}
+
+.Bar {
+    height: calc(100vh - 70px);
+    width: 320px;
+    padding: 4px;
+
+    background-color: #293235
+}
+
+.total__stats {
+    display: block;
+    width: 100%;
+    height: 80px;
+    margin-bottom: 6px;
+
+    border: 1px solid rgb(179, 143, 47);
+    border-radius: 6px 6px 0px 0px;
+}
+
+.bar__title {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fefefe;
+    text-align: center;
+    border-bottom: 1px solid rgb(179, 143, 47);
+}
+
+.create__room {
+    position: absolute;
+    display: block;
+    height: 24px;
+    width: 24px;
+    top: 3px;
+    right: 10px;    
+    cursor: pointer;
+
+}
+
+.create__room:hover::before,
+.create__room:hover::after {
+    background-color: rgb(187, 255, 78);
+}
+
+.create__room::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 24px;
+    height: 4px;
+    left: 0;
+    top: calc(50% - 2px);
+
+    background-color: rgb(35, 255, 53);
+    z-index: 300;
+}
+
+.create__room::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 24px;
+    height: 4px;
+    left: 0;
+    top: calc(50% - 2px);
+    transform: rotate(90deg);
+
+    background-color: rgb(35, 255, 53);
+    z-index: 300;
+}
+
+.bar__item__wrapper {
+    height: calc(100% - 32px);
+    width: 100%;
+    padding: 0px 10px;
+    overflow-y: scroll;
+}
+
+.inner__total__users {
+    width: 100%;
+    height: 24px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fefefe;
+
+    border-bottom: 1px solid rgb(179, 143, 47);
+}
+
+.inner__total__rooms {
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fefefe;
+}
+
+/*  PRIVATE MESSAGE  */
+
+.private__block {
+    display: flex;
+    justify-content:center;
+    width: 100%;
+    height: 30px;
+    padding: 0px 30px 0px 10px;
+    border-bottom: 1px solid rgb(179, 143, 47);
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.private__block.active {
+    animation-direction: alternate;
+	animation-duration: .8s;
+	animation-name: flashborder;
+	animation-iteration-count: 6;
+    animation-timing-function: linear;
+    border-bottom: 1px solid rgb(179, 143, 47);
+}
+
+.private__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fefefe;
+}
+
+.letter {
+    position: relative;
+    height: 24px;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgb(179, 143, 47);
+}
+
+.letter.flash::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    right: -4px;
+    top: 0px;
+    border-radius: 50%;
+
+    background-color: rgb(255, 53, 53);
+}
+
+.mes {
+    height: 24px;
+    margin-left: 4px;
+    padding-top: 4px;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #fefefe;
+}
+
+/*  /PRIVATE MESSAGE  */
+
+.bar__users {
+    width: 100%;
+    height: calc(50% - 70px);
+    margin-bottom: 10px;
+
+    border: 1px solid rgb(179, 143, 47);
+    overflow: hidden;
+}
+
+.bar__rooms {
+    width: 100%;
+    height: calc(50% - 70px);
+
+    border-radius: 0px 0px 6px 6px;
+    border: 1px solid rgb(179, 143, 47);
+    overflow: hidden;
+}
+
+.bar__item {
+    position: relative;
+    padding-left: 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+
+    font-size: 18px;
+    font-style: 600px;
+    color: #cceef8;
+    cursor: pointer;
+
+    border-bottom: 1px solid rgb(90, 81, 4);
+    transition: all linear .1s;
+}
+
+.bar__item:hover {
+    transition: all linear .1s;
+    padding-left: 20px;
+    color: #fde4c2;
+    border-bottom: 1px solid rgb(245, 225, 51);
+} 
+
+.bar__item.current::after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    left: 0;
+    top: 10px;
+
+    border-top: 2px solid rgb(221, 152, 40);
+    border-right: 2px solid rgb(170, 110, 15);
+    transform: rotate(45deg);
+}
+
+/* SCROLL BAR */
+
+.bar__item__wrapper::-webkit-scrollbar {
+    width: 16px;               /* width of the entire scrollbar */
+  }
+  
+.bar__item__wrapper::-webkit-scrollbar-track {
+    background: #293235        /* color of the tracking area */
+  }
+  
+.bar__item__wrapper::-webkit-scrollbar-thumb {
+    background-color: rgb(226, 168, 42);
+    border-radius: 20px;       
+    border: 4px solid #293235;  
+}

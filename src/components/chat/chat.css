@@ -1,0 +1,14 @@
+.Chat {
+    height: calc(100vh - 70px);
+    display: flex;
+    width: 100%;
+    background-color: transparent;
+}
+
+.mes__input__wrapper {
+    height: calc(100vh - 70px);
+    width: 100%;
+    display: block;
+    background-color: #293235
+}
+
